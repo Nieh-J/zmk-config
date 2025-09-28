@@ -10,6 +10,22 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
+sensors {
+compatible = "zmk,sensors";
+
+    ec11_lbkt: ec11_lbkt {
+        compatible = "alps,ec11";
+        label = "EC11_LBKT";
+        a-gpios = <&gpio0 31 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        b-gpios = <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        status = "okay";
+    };
+};
+		
+
+};
+
+/ {
     keymap {
         compatible = "zmk,keymap";
 
